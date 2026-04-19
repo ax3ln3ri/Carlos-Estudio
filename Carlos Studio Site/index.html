@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Studio | Photography & Cinema Las Vegas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --heading-font: 'Playfair Display', serif;
+            --body-font: 'Lato', sans-serif;
+        }
+
+        body { 
+            font-family: var(--body-font); 
+            background-color: #fff; 
+            color: #222; 
+            overflow-x: hidden; 
+        }
+        
+        h1, h2, h3, .navbar-brand { font-family: var(--heading-font); }
+
+        /* Navbar */
+        .navbar { background-color: #fff; border-bottom: 1px solid #f4f4f4; padding: 15px 0; }
+        .nav-link { color: #111 !important; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin: 0 15px; }
+
+        /* Hero Carousel - Text Only */
+        .carousel-item { height: 90vh; background-color: #000; }
+        .carousel-item img { height: 100%; width: 100%; object-fit: cover; filter: brightness(80%); }
+        .carousel-caption { bottom: 35%; }
+        .carousel-caption h1 { 
+            font-size: 4.5rem; 
+            font-style: italic; 
+            letter-spacing: 2px; 
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        .hero-tagline {
+            letter-spacing: 6px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        /* Profile Section */
+        .profile-img-container img { border: 15px solid #f8f8f8; width: 100%; max-height: 600px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+        /* Gallery Filters */
+        .filter-btn { border: none; background: none; padding: 10px 25px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #999; cursor: pointer; transition: 0.3s; }
+        .filter-btn.active, .filter-btn:hover { color: #000; font-weight: 700; border-bottom: 2px solid #000; }
+
+        /* Gallery Grid - Full Color */
+        .gallery-item { transition: 0.4s; margin-bottom: 30px; }
+        .img-box { overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .img-box img { width: 100%; height: 450px; object-fit: cover; transition: 0.8s ease; cursor: pointer; }
+        .img-box:hover img { transform: scale(1.08); }
+
+        /* Contact Section */
+        #contact { background-color: #fcfcfc; padding: 100px 0; }
+        .contact-label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 8px; }
+        .form-control, .form-select { border-radius: 0; border: 1px solid #e0e0e0; padding: 15px; }
+        .btn-dark { border-radius: 0; letter-spacing: 3px; font-weight: 700; padding: 18px 40px; background-color: #111; }
+        .map-box iframe { width: 100%; height: 450px; border: 0; }
+        
+        footer { background: #111; color: #eee; padding: 80px 0; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Carlos Studio" style="height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profile">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/carousel/hero1.jpg" alt="Featured 1">
+                <div class="carousel-caption text-center">
+                    <h1>Carlos Studio</h1>
+                    <p class="hero-tagline">Storytelling through the lens</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/hero2.jpg" alt="Featured 2">
+                <div class="carousel-caption text-center">
+                    <h1>Carlos Studio</h1>
+                    <p class="hero-tagline">Storytelling through the lens</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/hero3.jpg" alt="Featured 3">
+                <div class="carousel-caption text-center">
+                    <h1>Carlos Studio</h1>
+                    <p class="hero-tagline">Storytelling through the lens</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/hero4.jpg" alt="Featured 4">
+                <div class="carousel-caption text-center">
+                    <h1>Carlos Studio</h1>
+                    <p class="hero-tagline">Storytelling through the lens</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/hero5.jpg" alt="Featured 5">
+                <div class="carousel-caption text-center">
+                    <h1>Carlos Studio</h1>
+                    <p class="hero-tagline">Storytelling through the lens</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="profile" class="py-5 bg-white mt-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center"><img src="img/profile-carlos.jpg" alt="Carlos" class="img-fluid profile-img-container shadow"></div>
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase text-muted fw-bold mb-3" style="letter-spacing: 3px;">The Professional</h6>
+                    <h2 class="display-5 mb-4 text-uppercase">Carlos Studio</h2>
+                    <p class="lead" style="font-family: var(--heading-font); font-style: italic;">
+                        Carlos Studio is a professional photography studio in Las Vegas specializing in 
+                        wedding photography, high-end portraiture, and corporate headshots.
+                    </p>
+                    <p class="text-muted mt-3">Whether you need vibrant event coverage or polished commercial shots, we focus on storytelling and exceptional quality. Serving Las Vegas, Henderson, and the surrounding North Nevada areas.</p>
+                    <div class="mt-4"><a href="#contact" class="btn btn-dark px-5 py-3">BOOK NOW</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container text-center">
+            <h2 class="display-6 mb-4">PORTAFOLIO</h2>
+            <div class="mb-5">
+                <button class="filter-btn active" onclick="filterGallery('all')">Todas</button>
+                <button class="filter-btn" onclick="filterGallery('wedding')">Bodas</button>
+                <button class="filter-btn" onclick="filterGallery('quince')">XV Años</button>
+                <button class="filter-btn" onclick="filterGallery('studio')">Studio</button>
+            </div>
+            <div class="row" id="gallery-grid">
+                <div class="col-md-4 gallery-item wedding"><div class="img-box"><img src="img/weddings/w1.jpg"></div></div>
+                <div class="col-md-4 gallery-item wedding"><div class="img-box"><img src="img/weddings/w1.jpg"></div></div>
+                <div class="col-md-4 gallery-item wedding"><div class="img-box"><img src="img/weddings/w1.jpg"></div></div>
+                <div class="col-md-4 gallery-item wedding"><div class="img-box"><img src="img/weddings/w1.jpg"></div></div>
+                <div class="col-md-4 gallery-item wedding"><div class="img-box"><img src="img/weddings/w1.jpg"></div></div>
+                <div class="col-md-4 gallery-item quince"><div class="img-box"><img src="img/quinceaneras/q1.jpg"></div></div>
+                <div class="col-md-4 gallery-item quince"><div class="img-box"><img src="img/quinceaneras/q2.jpg"></div></div>
+                <div class="col-md-4 gallery-item quince"><div class="img-box"><img src="img/quinceaneras/q3.jpg"></div></div>
+                <div class="col-md-4 gallery-item quince"><div class="img-box"><img src="img/quinceaneras/q4.jpg"></div></div>
+                <div class="col-md-4 gallery-item quince"><div class="img-box"><img src="img/quinceaneras/q5.jpg"></div></div>
+                <div class="col-md-4 gallery-item studio"><div class="img-box"><img src="img/studio/s1.jpg"></div></div>
+                <div class="col-md-4 gallery-item studio"><div class="img-box"><img src="img/studio/s1.jpg"></div></div>
+                <div class="col-md-4 gallery-item studio"><div class="img-box"><img src="img/studio/s1.jpg"></div></div>
+                <div class="col-md-4 gallery-item studio"><div class="img-box"><img src="img/studio/s1.jpg"></div></div>
+                <div class="col-md-4 gallery-item studio"><div class="img-box"><img src="img/studio/s1.jpg"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <h2 class="display-6 mb-5">HABLEMOS</h2>
+                    <p class="contact-label">Dirección</p>
+                    <p class="h5 mb-4">1002 E Charleston Blvd, Las Vegas, NV 89104</p>
+                    <p class="contact-label">Teléfono</p>
+                    <p class="h5 mb-4">(702) 239-4269</p>
+                    <div class="map-box mt-4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.123546743283!2d-115.1374567234676!3d36.1598444038104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c3975515286d%3A0x6a0f789e900a068d!2s1002%20E%20Charleston%20Blvd%2C%20Las%20Vegas%2C%20NV%2089104!5e0!3m2!1sen!2sus!4v1714574921948!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                </div>
+                <div class="col-lg-7">
+                    <form class="row g-4">
+                        <div class="col-md-6"><p class="contact-label">Tu Nombre</p><input type="text" class="form-control" required></div>
+                        <div class="col-md-6"><p class="contact-label">Tu Email</p><input type="email" class="form-control" required></div>
+                        <div class="col-12"><p class="contact-label">Interés</p><select class="form-select"><option>Boda</option><option>15 Años</option><option>Studio</option></select></div>
+                        <div class="col-12"><p class="contact-label">Mensaje</p><textarea class="form-control" rows="6"></textarea></div>
+                        <div class="col-12 text-end"><button type="submit" class="btn btn-dark px-5 py-3">ENVIAR</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <h3 class="mb-3 text-uppercase">Carlos Studio</h3>
+            <p class="small opacity-50">© 2026 Carlos Studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'Todas')) btn.classList.add('active');
+            });
+            items.forEach(item => { item.style.display = (category === 'all' || item.classList.contains(category)) ? 'block' : 'none'; });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
