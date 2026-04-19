@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,12 +27,20 @@
         .hero-tagline { font-family: var(--body-font); letter-spacing: 6px; font-size: 1.1rem; text-transform: uppercase; font-weight: 400; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); }
 
         .profile-img-container img { border: 15px solid #f8f8f8; width: 100%; max-height: 600px; object-fit: cover; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        
+        /* Gallery Filters */
         .filter-btn { border: none; background: none; padding: 10px 25px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #999; cursor: pointer; transition: 0.3s; }
         .filter-btn.active, .filter-btn:hover { color: #000; font-weight: 700; border-bottom: 2px solid #000; }
         .gallery-item { transition: 0.4s; margin-bottom: 30px; }
         .img-box { overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
         .img-box img { width: 100%; height: 450px; object-fit: cover; transition: 0.8s ease; cursor: pointer; }
         .img-box:hover img { transform: scale(1.08); }
+
+        /* FAQ Styling */
+        .accordion-button:not(.collapsed) { background-color: #f8f8f8; color: #000; box-shadow: none; }
+        .accordion-button:focus { box-shadow: none; border-color: #eee; }
+        .accordion-item { border: none; border-bottom: 1px solid #eee; }
+
         #contact { background-color: #fcfcfc; padding: 100px 0; }
         .contact-label { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 8px; }
         .form-control, .form-select { border-radius: 0; border: 1px solid #e0e0e0; padding: 15px; }
@@ -48,11 +56,13 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Carlos Studio" style="height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#profile">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#gallery">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
             </div>
@@ -63,39 +73,12 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="img/carousel/hero1.JPG" alt="Featured 1">
-                <div class="carousel-caption text-center">
-                    <h1>Carlos Studio</h1>
-                    <p class="hero-tagline">Storytelling through the lens</p>
-                </div>
+                <div class="carousel-caption text-center"><h1>Carlos Studio</h1><p class="hero-tagline">Storytelling through the lens</p></div>
             </div>
-            <div class="carousel-item">
-                <img src="img/carousel/hero2.JPG" alt="Featured 2">
-                <div class="carousel-caption text-center">
-                    <h1>Carlos Studio</h1>
-                    <p class="hero-tagline">Storytelling through the lens</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/carousel/hero3.JPG" alt="Featured 3">
-                <div class="carousel-caption text-center">
-                    <h1>Carlos Studio</h1>
-                    <p class="hero-tagline">Storytelling through the lens</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/carousel/hero4.JPG" alt="Featured 4">
-                <div class="carousel-caption text-center">
-                    <h1>Carlos Studio</h1>
-                    <p class="hero-tagline">Storytelling through the lens</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="img/carousel/hero5.JPG" alt="Featured 5">
-                <div class="carousel-caption text-center">
-                    <h1>Carlos Studio</h1>
-                    <p class="hero-tagline">Storytelling through the lens</p>
-                </div>
-            </div>
+            <div class="carousel-item"><img src="img/carousel/hero2.JPG" alt="Featured 2"><div class="carousel-caption text-center"><h1>Carlos Studio</h1><p class="hero-tagline">Storytelling through the lens</p></div></div>
+            <div class="carousel-item"><img src="img/carousel/hero3.JPG" alt="Featured 3"><div class="carousel-caption text-center"><h1>Carlos Studio</h1><p class="hero-tagline">Storytelling through the lens</p></div></div>
+            <div class="carousel-item"><img src="img/carousel/hero4.JPG" alt="Featured 4"><div class="carousel-caption text-center"><h1>Carlos Studio</h1><p class="hero-tagline">Storytelling through the lens</p></div></div>
+            <div class="carousel-item"><img src="img/carousel/hero5.JPG" alt="Featured 5"><div class="carousel-caption text-center"><h1>Carlos Studio</h1><p class="hero-tagline">Storytelling through the lens</p></div></div>
         </div>
     </div>
 
@@ -114,7 +97,40 @@
         </div>
     </section>
 
-    <section id="gallery" class="py-5">
+    <section id="elegirnos" class="py-5 bg-dark text-white">
+        <div class="container py-5 text-center">
+            <h2 class="display-5 mb-4 text-uppercase fw-bold" style="letter-spacing: 3px;">¿Por qué elegirnos?</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="lead mb-4">En Gallery Studio, tenemos más de 20 de experiencia. Contamos con un equipo de colaboradores profesionales en el lenguaje audiovisual, con la sensibilidad necesaria para entender a nuestros clientes.</p>
+                    <p class="mb-4">Trabajamos a través de técnicas innovadoras, para que cada uno de nuestros entregables, tengan la mejor calidad y logren inmortalizar los recuerdos más especiales.</p>
+                    <p>Nuestros servicios siempre van más allá, en Gallery Studio nos involucramos desde la planeación y creatividad de una producción, hasta la asesoría de imagen. Te llevamos de la mano con recomendaciones constantes para generar un producto único. Además, nos encargamos de la edición del material audiovisual hasta su impresión y grabación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cinema" class="py-5 bg-white">
+        <div class="container py-5">
+            <h2 class="display-5 mb-4 text-uppercase text-center">Gallery Cinema</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="lead">Sabemos estar con la gente, en sus grandes momentos. En Gallery Cinema, nos encargamos de toda la planeación, filmación y entrega de material audiovisual de tus eventos más importantes.</p>
+                    <h4 class="fw-bold mt-4">Paquetes integrales de fotografía y video</h4>
+                    <p>Nos interesa que nuestros clientes, estén 100% satisfechos al elegirnos. Es por esto que tenemos paquetes que se adaptan a las distintas necesidades y presupuestos:</p>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-dot"></i> Formatos de fotografías en distintos tamaños y videos en distintos formatos.</li>
+                        <li><i class="bi bi-dot"></i> Álbumes de montaje de fotografías</li>
+                        <li><i class="bi bi-dot"></i> Videos digitales con cobertura del evento (bodas, quince años, ceremonias, etc.)</li>
+                        <li><i class="bi bi-dot"></i> Video proyección en pantallas durante el evento.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 text-center"><img src="img/carousel/hero4.JPG" class="img-fluid shadow"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5 bg-light">
         <div class="container text-center">
             <h2 class="display-6 mb-4">PORTAFOLIO</h2>
             <div class="mb-5">
@@ -135,16 +151,51 @@
         </div>
     </section>
 
+    <section id="faq" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="display-6 text-center mb-5 text-uppercase">FAQ</h2>
+            <div class="accordion accordion-flush mx-auto" style="max-width: 850px;">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#f1">¿Con cuánta anticipación hay que ponerse en contacto?</button></h2>
+                    <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Unos 8 ó 6 meses de anticipación y si fuera con menos tiempo seria sólo si aún tenemos la fecha disponible.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#f2">¿Cubre más de un evento al día?</button></h2>
+                    <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sí</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#f3">¿En que áreas trabaja?</button></h2>
+                    <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">En Estados Unidos, México y el extranjero.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#f4">¿Hay algún costo extra por desplazamiento?</button></h2>
+                    <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sí, serían más viáticos.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#f5">¿Qué estilo de fotografía realiza?</button></h2>
+                    <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Tradicional, artística, fotografía de autor.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#f6">¿Qué material utiliza?</button></h2>
+                    <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Equipo de la más alta tecnología, único con laboratorio propio, área de atención a clientes, área de diseño, área de ventas, área de edición, área de impresión y área de producción.</div></div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" data-bs-toggle="collapse" data-bs-target="#f7">Si es necesario, ¿Puede trabajar horas extra?</button></h2>
+                    <div id="f7" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Sí</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-5">
                     <h2 class="display-6 mb-5 text-uppercase">HABLEMOS</h2>
-                    <p class="contact-label">Dirección</p>
-                    <p class="h5 mb-2">1002 E Charleston Blvd, Las Vegas, NV 89104</p>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=1002+E+Charleston+Blvd+Las+Vegas+NV+89104" target="_blank" class="btn btn-outline-dark btn-sm mb-4"><i class="bi bi-geo-alt"></i> Get Directions</a>
+                    <p class="contact-label">Dirección</p><p class="h5 mb-2">1002 E Charleston Blvd, Las Vegas, NV 89104</p>
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.3653139369974!2d-115.1384752!3d36.1588699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c397166e4a2b%3A0xc391e4b370e0604b!2s1002%20E%20Charleston%20Blvd%2C%20Las%20Vegas%2C%20NV%2089104!5e0!3m2!1sen!2sus!4v1713540000000!5m2!1sen!2sus5" target="_blank" class="btn btn-outline-dark btn-sm mb-4"><i class="bi bi-geo-alt"></i> Get Directions</a>
                     <p class="contact-label">Teléfono</p><p class="h5 mb-4">(702) 239-4269</p>
-                    <div class="map-box mt-4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.8687791834244!2d-115.13843512347206!3d36.15876340333246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c397554906f3%3A0xe965b706c9a9d20c!2s1002%20E%20Charleston%20Blvd%2C%20Las%20Vegas%2C%20NV%2089104!5e0!3m2!1sen!2sus!4v1713500000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+                    <div class="map-box mt-4"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.3653139369974!2d-115.1384752!3d36.1588699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c397166e4a2b%3A0xc391e4b370e0604b!2s1002%20E%20Charleston%20Blvd%2C%20Las%20Vegas%2C%20NV%2089104!5e0!3m2!1sen!2sus!4v1713540000000!5m2!1sen!2sus6" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
                 </div>
                 <div class="col-lg-7">
                     <form class="row g-4">
@@ -163,14 +214,17 @@
         <div class="container"><h3 class="mb-3 text-uppercase">Carlos Studio</h3><p class="small opacity-50">© 2026 Carlos Studio. All Rights Reserved.</p></div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         function filterGallery(category) {
             const items = document.querySelectorAll('.gallery-item');
             const btns = document.querySelectorAll('.filter-btn');
-            btns.forEach(btn => { btn.classList.remove('active'); if(btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'Todas')) btn.classList.add('active'); });
+            btns.forEach(btn => { 
+                btn.classList.remove('active'); 
+                if(btn.innerText.toLowerCase().includes(category) || (category === 'all' && btn.innerText === 'Todas')) btn.classList.add('active'); 
+            });
             items.forEach(item => { item.style.display = (category === 'all' || item.classList.contains(category)) ? 'block' : 'none'; });
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
